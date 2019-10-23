@@ -1,6 +1,6 @@
 ﻿$(document).ready(
     function () {
-        $('input[name=BTN]').click(function () {
+        $('input[name=BTN]').click(function () {/**/
             var obj = {
                 nCdServico: $('input[name="servicos"]').val(),
                 sCepOrigem: $('input[name="cepori"]').val(),
