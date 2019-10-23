@@ -1,4 +1,4 @@
-﻿ <!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -10,104 +10,106 @@
     <link href="styles.css" rel="stylesheet" />
 
 </head>
+
 <body style="height:100vh;">
     <div class="row h-100">
         <div class="col-md-12 h-100 d-table">
-            <div class="card card-block d-table-cell align-middle h-100">
-                <div class="row justify-content-md-center h-100">
-                    <div class="card align-middle col-md-3">
-                        <div class="card-header text-center">
+           <div class="card card-block d-table-cell align-middle h-100">
+                    <div class="row justify-content-md-center h-100">
+                        <div class="card align-middle col-md-3">
+                            <div class="card-header text-center">
 
                             <h2>Calcúlo FRETE</h2>
 
-                            <div class="row ">
-                                <span>Serviços:</span>
+                                    <div class="row ">
+                                        <span >Serviços:</span>
 
-                                <span><input type="text" class="w-100 form-control form-group" name="servicos" value=""></span>
-                            </div>
+                                        <span ><input type="text" class="w-100 form-control form-group" name="servicos" value=""></span>
+                                    </div>
+                              
 
+                               
+                                    <div class="row">
+                                        <span>Cep Origem:</span>
+                                        <span><input type="text" class="w-100 form-control form-group" name="cepori" value=""></span>
+                                    </div>
+                         
 
+                                    <div class="row">
+                                        <span>Cep Destino:</span>
+                                        <span><input type="text" class="w-100 form-control form-group" name="cepdes" value=""></span>
+                                    </div>
 
-                            <div class="row">
-                                <span>Cep Origem:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="cepori" value=""></span>
-                            </div>
+                                    <div class="row">
+                                        <span>Peso:</span>
+                                        <span><input type="text" class="w-100 form-control form-group" name="peso" value=""></span>
+                                    </div>
 
+                                    <div class="row">
+                                        <span>Formato:</span>
+                                        <span>
+                                            <select class="w-100 form-control form-group" name="formato" size="1">
+                                                <option value="1">Caixa/pacote</option>
+                                            </select>
+                                        </span>
 
-                            <div class="row">
-                                <span>Cep Destino:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="cepdes" value=""></span>
-                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <span>Comprimento:</span>
+                                        <span><input type="text" class="w-100 form-control form-group" name="comprimento" value=""></span>
+                                    </div>
 
-                            <div class="row">
-                                <span>Peso:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="peso" value=""></span>
-                            </div>
+                                    <div class="row">
+                                        <span>Altura:</span>
+                                        <span><input type="text" class="w-100 form-control form-group" name="altura" value=""></span>
+                                    </div>
 
-                            <div class="row">
-                                <span>Formato:</span>
-                                <span>
-                                    <select class="w-100 form-control form-group" name="formato" size="1">
-                                        <option value="1">Caixa/pacote</option>
-                                    </select>
-                                </span>
+                                    <div class="row">
+                                        <span>Largura:</span>
+                                        <span><input type="text" class="w-100 form-control form-group" name="largura" value=""></span>
+                                    </div>
 
-                            </div>
-                            <div class="row">
-                                <span>Comprimento:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="comprimento" value=""></span>
-                            </div>
+                                    <div class="row">
+                                        <span>Mão própria:</span>
+                                        <span>
+                                            <select class="w-100 form-control form-group" name="maopropria" size="1">
+                                                <option value="S">Sim</option>
+                                                <option value="N">Não</option>
+                                            </select>
+                                        </span>
+                                    </div>
 
-                            <div class="row">
-                                <span>Altura:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="altura" value=""></span>
-                            </div>
+                                    <div class="row">
+                                        <span>Valor declarado:</span>
+                                        <span><input type="text" class="w-100 form-control form-group"  name="valordeclarado" value=""></span>
+                                    </div>
 
-                            <div class="row">
-                                <span>Largura:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="largura" value=""></span>
-                            </div>
+                                    <div class="row">
+                                        <span>Aviso de Recebimento:</span>
+                                        <span>
+                                            <select class="w-100 form-control form-group"  name="avisorecebimento" size="1">
+                                                <option value="S">Sim</option>
+                                                <option value="N">Não</option>
+                                            </select>
+                                        </span>
+                                    </div>
 
-                            <div class="row">
-                                <span>Mão própria:</span>
-                                <span>
-                                    <select class="w-100 form-control form-group" name="maopropria" size="1">
-                                        <option value="S">Sim</option>
-                                        <option value="N">Não</option>
-                                    </select>
-                                </span>
-                            </div>
-
-                            <div class="row">
-                                <span>Valor declarado:</span>
-                                <span><input type="text" class="w-100 form-control form-group" name="valordeclarado" value=""></span>
-                            </div>
-
-                            <div class="row">
-                                <span>Aviso de Recebimento:</span>
-                                <span>
-                                    <select class="w-100 form-control form-group" name="avisorecebimento" size="1">
-                                        <option value="S">Sim</option>
-                                        <option value="N">Não</option>
-                                    </select>
-                                </span>
-                            </div>
-
-                            <div>
-                                <span>
-                                    <input type="button" name="BTN" class="btn btn-light" value="Consultar"
-                                           ID="Submit1">
-                                </span>
+                                    <div>
+                                        <span>
+                                            <input type="SUBMIT" name="BTN" class="btn btn-light" value="Consultar"
+                                                   ID="Submit1">
+                                        </span>
+                                    </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+          
         </div>
     </div>
-    
-    <script src="Scripts/jquery-3.4.1.js"></script>
+
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/inputmask/inputmask.js"></script>
     <script src="Scripts/Util/script.js"></script>
