@@ -1,0 +1,25 @@
+﻿body {
+    background-image: url('http://yesofcorsa.com/wp-content/uploads/2017/08/4K-Yellow-Wallpaper-Download.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 2.3;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+}
+
+.card-header {
+
+    background-color: rgba(255, 255, 255, 0.53);
+    border-bottom: none;
+}
+
+.form-control {
+    border: 1px solid #fff;
+}
+
+input, select {
+    margin-left: 25px;
+}
