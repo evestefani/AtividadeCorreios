@@ -1,37 +1,20 @@
-﻿$(document).ready(
-    function () {
-        $('input[name=BTN]').click(function () {
-            
-            var obj = {
-                nCdServico: $('input[name="servicos"]').val(),
-                sCepOrigem: $('input[name="cepori"]').val(),
-                sCepDestino: $('input[name="cepdes"]').val(),
-                nVlPeso: $('input[name="peso"]').val(),
-                nCdFormato: $('input[name="formato"]').val(),
-                nVlComprimento: $('input[name="comprimento"]').val(),
-                nVlAltura: $('input[name="altura"]').val(),
-                nVlLargura: $('input[name="largura"]').val(),
-                sCdMaoPropria: $('input[name="maopropria"]').val(),
-                nVlValorDeclarado: $('input[name="valordeclarado"]').val(),
-                sCdAvisoRecebimento: $('input[name="avisorecebimento"]').val(),
+﻿$(document).ready(function () {
+    $('input[name="BTN"]').click(function () {
+        //obter as informações dos meus campos
+        //Obtemos as informações do nosso formulario web completo
+        var informacoes = $('form[name="formenviar"]').serializeArray();
+        //Obtemos o atributo que indica a pagina que vamos enviar o post
+        var obterAtributo = $('form[name="formenviar"]').attr('send-post');
 
-            }
-            
-            $.post("http://usysweb.com.br/api/correiosambev.php?giomar=true", obj, function (data) {
-               
-                var objeto = JSON.stringify(obj)
-                alert(objeto);
+        //Enviamos o post para nosso servidor web
+        $.post("http://usysweb.com.br/api/" + obterAtributo + ".php?giomar=true", informacoes, function (data) {
+            //aqui como recebemos uma string com formato de JSON
+            //temos que passar ela para o JSON parecido com o int.Parse()
+            data = JSON.parse(data);
+            //Aqui carregamos as informações automaticamente
+            $.each(data.cServico, function (key, value) {
+                $('p[name="{key}"'.replace("{key}", key)).text(value);
             });
-            
-
-
-           /* $.getJSON(options.uri, options.qs, function (data) {
-
-                alert("valor total" + data.cServico.valor + "\n\rPrazo Entrega" + data.cServico.PrazoEntrega +
-                    "\n\rValor sem adicionais" + data.cServico.ValorSemAdicionais);
-
-            });*/
-
         });
-                
     });
+});

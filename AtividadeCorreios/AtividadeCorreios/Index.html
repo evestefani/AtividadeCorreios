@@ -11,7 +11,7 @@
 </head>
 
 <body style="height:100vh;">
-  
+
     <div class="col-md-12 d-table">
         <div class="row d-flex align-content-center justify-content-center">
             <div class="card text-center col-md-6">
@@ -21,108 +21,137 @@
                     <h2>Calcúlo FRETE</h2>
 
                 </div>
+                <form name="formenviar" method="get" send-post="correiosambev">
 
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Serviços:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="servicos" value="">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Cep Origem:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="cepori" value="">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Cep Destino:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="cepdes" value="">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Peso:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="peso" value="">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Formato</label>
-                    <div class="col-sm-6">
-                        <select class=" w-50 form-control" name="formato" size="1">
-                            <option value="1">Caixa/pacote</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Comprimento:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="comprimento" value="">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Altura:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="altura" value="">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Largura:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="largura" value="">
-                    </div>
-                </div>
-
-
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Mão Própria:</label>
-                    <div class="col-sm-6">
-                        <select class="w-50 form-control" name="maopropria" size="1">
-                            <option value="S">Sim</option>
-                            <option value="N">Não</option>
-                        </select>
-
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Declarado:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="valordeclarado" value="">
-                    </div>
-                </div>
-
-
-                <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-3 col-form-label">Aviso Recebimento:</label>
-                    <div class="col-sm-6">
-                        <select class="w-50 form-control" name="avisorecebimento" size="1">
-                            <option value="S">Sim</option>
-                            <option value="N">Não</option>
-                        </select>
-
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Serviços:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="nCdServico" placeholder="Informe o serviço a ser utilizado">
+                        </div>
                     </div>
 
-                </div>
-                <div>
-                    <span>
-                        <input type="SUBMIT" name="BTN" class="btn btn-light" value="Consultar"
-                               ID="Submit1">
-                    </span>
-                </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Cep Origem:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="sCepOrigem" placeholder="Informe cep de origem">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Cep Destino:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="sCepDestino" placeholder="Informe cep de destino">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Peso:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="nVlPeso" placeholder="Informe peso">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Formato</label>
+                        <div class="col-sm-6">
+                            <select class=" w-50 form-control" name="nCdFormato" size="1">
+                                <option value="1">Caixa/pacote</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Comprimento:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="nVlComprimento" placeholder="Informe comprimento">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Altura:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="nVlAltura" placeholder="Informe altura">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Largura:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="nVlLargura" placeholder="Informe largura">
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Mão Própria:</label>
+                        <div class="col-sm-6">
+                            <select class="w-50 form-control" name="sCdMaoPropria" size="1">
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Declarado:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" ame="nVlValorDeclarado" placeholder="Informe o valor da mercadoria">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Aviso Recebimento:</label>
+                        <div class="col-sm-6">
+                            <select class="w-50 form-control" name="sCdAvisoRecebimento" size="1">
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Retorno:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="StrRetorno" placeholder="Informe o tipo de retorno xml">
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>
+                            <input type="button" class="btn btn-light form-group" name="BTN" value="Consultar" data-toggle="modal" data-target="#exampleModal" />
+                        </span>
+                    </div>
+                </form>
+
             </div>
 
         </div>
     </div>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p name="Valor"></p>
+                    <p name="PrazoEntrega"></p>
+                    <p name="ValorSemAdicionais"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
