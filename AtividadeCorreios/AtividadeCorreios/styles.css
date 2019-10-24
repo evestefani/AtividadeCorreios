@@ -1,0 +1,28 @@
+﻿body {
+    background-image: url('https://wallpaperaccess.com/full/763840.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 2.3;
+}
+
+.card {
+    background-color: #d4cfb3a1 !important;
+    border-color: transparent !important;
+    border-bottom-width: 15px;
+    margin-top: 15px !important;
+}
+
+.card-header {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    outline-color: #000000;
+}
+
+.form-control {
+    border: 1px solid #fff;
+}
+
+input, select {
+    margin-left: 25px;
+}
+

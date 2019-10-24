@@ -2,9 +2,133 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <title>Calcúlo Frete Correios</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body style="height:100vh;">
+  
+    <div class="col-md-12 d-table">
+        <div class="row d-flex align-content-center justify-content-center">
+            <div class="card text-center col-md-6">
+
+                <div class="card-header text-center">
+
+                    <h2>Calcúlo FRETE</h2>
+
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Serviços:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="servicos" value="">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Cep Origem:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="cepori" value="">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Cep Destino:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="cepdes" value="">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Peso:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="peso" value="">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Formato</label>
+                    <div class="col-sm-6">
+                        <select class=" w-50 form-control" name="formato" size="1">
+                            <option value="1">Caixa/pacote</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Comprimento:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="comprimento" value="">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Altura:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="altura" value="">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Largura:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="largura" value="">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Mão Própria:</label>
+                    <div class="col-sm-6">
+                        <select class="w-50 form-control" name="maopropria" size="1">
+                            <option value="S">Sim</option>
+                            <option value="N">Não</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Declarado:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="valordeclarado" value="">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Aviso Recebimento:</label>
+                    <div class="col-sm-6">
+                        <select class="w-50 form-control" name="avisorecebimento" size="1">
+                            <option value="S">Sim</option>
+                            <option value="N">Não</option>
+                        </select>
+
+                    </div>
+
+                </div>
+                <div>
+                    <span>
+                        <input type="SUBMIT" name="BTN" class="btn btn-light" value="Consultar"
+                               ID="Submit1">
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/inputmask/inputmask.js"></script>
+    <script src="Scripts/Util/script.js"></script>
 </body>
 </html>
