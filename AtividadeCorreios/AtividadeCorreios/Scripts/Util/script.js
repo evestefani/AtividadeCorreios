@@ -1,6 +1,7 @@
 ﻿$(document).ready(
     function () {
-        $('input[name=BTN]').click(function () {/**/
+        $('input[name=BTN]').click(function () {
+            
             var obj = {
                 nCdServico: $('input[name="servicos"]').val(),
                 sCepOrigem: $('input[name="cepori"]').val(),
@@ -13,16 +14,24 @@
                 sCdMaoPropria: $('input[name="maopropria"]').val(),
                 nVlValorDeclarado: $('input[name="valordeclarado"]').val(),
                 sCdAvisoRecebimento: $('input[name="avisorecebimento"]').val(),
+
             }
             
-            $.post("http://usysweb.com.br/api/correiosambev.php?nCdEmpresa=08082650&sDsSenha=564321&sCepOrigem=70002900&sCepDestino=04547000&nVlPeso=1&nCdFormato=1&nVlComprimento=20&nVlAltura=20&nVlLargura=20&sCdMaoPropria=n&nVlValorDeclarado=0&sCdAvisoRecebimento=n&nCdServico=04510&nVlDiametro=0&StrRetorno=xml&nIndicaCalculo=3", obj, function (data) {
-                //var objeto = 
+            $.post("http://usysweb.com.br/api/correiosambev.php?giomar=true", obj, function (data) {
+               
                 var objeto = JSON.stringify(obj)
                 alert(objeto);
             });
+            
 
+
+           /* $.getJSON(options.uri, options.qs, function (data) {
+
+                alert("valor total" + data.cServico.valor + "\n\rPrazo Entrega" + data.cServico.PrazoEntrega +
+                    "\n\rValor sem adicionais" + data.cServico.ValorSemAdicionais);
+
+            });*/
 
         });
                 
-
     });
